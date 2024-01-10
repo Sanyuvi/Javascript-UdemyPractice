@@ -86,3 +86,48 @@ if (hasDriversLicense && hasGoodVision && !isTiried) {
 } else {
   console.log(`Someone else should drive...`);
 }
+
+// Function declaration
+
+function freshJuice(apple, orange) {
+  const juice = `juice with ${apple} apple and ${orange} orange`;
+  return juice;
+}
+const drinkJuice = freshJuice(4, 3);
+console.log(drinkJuice);
+
+function calAge1(birthYear) {
+  return 2037 - birthYear;
+}
+const age1 = calAge1(2012);
+console.log(age1);
+
+// function expression
+const calAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+const age2 = calAge2(2008);
+console.log(age2);
+
+// Arrow function
+
+const ageUntilRetierment = (birthYear, bestName) => {
+  const age = 2037 - birthYear;
+  const retiredAge = 60 - age;
+  return `${bestName} retires at the age of ${retiredAge}`;
+};
+console.log(ageUntilRetierment(2004, "Anil"));
+
+// function calling another function
+function cutPeices(fruit) {
+  return fruit * 5;
+}
+
+function freshJuice(apple, orange) {
+  const appleJuice = cutPeices(apple);
+  const orangeJuice = cutPeices(orange);
+  const juice = `juice with ${appleJuice} apple and ${orangeJuice} orange`;
+  return juice;
+}
+const drinkJuices = freshJuice(4, 3);
+console.log(drinkJuice);
