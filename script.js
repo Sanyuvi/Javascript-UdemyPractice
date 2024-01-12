@@ -131,3 +131,24 @@ function freshJuice(apple, orange) {
 }
 const drinkJuices = freshJuice(4, 3);
 console.log(drinkJuice);
+// Arrays exercise
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const years = [2008, 2015, 1998, 2000];
+
+console.log(calcAge(years[0]));
+console.log(calcAge(years[1]));
+console.log(calcAge(years[3]));
+console.log(calcAge(years[2]));
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[2]),
+  calcAge(years[3]),
+];
+
+console.log(ages);
