@@ -251,3 +251,41 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //   return acc + cur;
 // }, 0);
 // console.log(balance);
+
+//Array methods practice
+//1.
+// const bankDepositSum = accounts
+//   .flatMap(acc => acc.movements)
+//   .filter(mov => mov > 0)
+//   .reduce((sum, cur) => sum + cur, 0);
+// console.log(bankDepositSum);
+// //2.
+// let a = 10;
+// console.log(a++);
+// console.log(a);
+
+// //3.
+// const sums = accounts
+//   .flatMap(acc => acc.movements)
+//   .reduce(
+//     (sums, cur) => {
+//       cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+//       return sums;
+//     },
+//     { deposits: 0, withdrawals: 0 }
+//   );
+// console.log(sums);
+// //4.
+// //this is a nice title
+// const convertTitleCase = function (title) {
+//   const capitalize = str => str[0].toUpperCase() + str.slice(1);
+//   const expections = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with'];
+//   const titleCase = title
+//     .toLowerCase()
+//     .split(' ')
+//     .map(word => (expections.includes(word) ? word : capitalize(word)))
+//     .join(' ');
+//   return titleCase;
+// };
+// console.log(convertTitleCase('this is a nice title'));
+// console.log(convertTitleCase('this is a nice or More of Work'));
